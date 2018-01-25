@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "GitLab Issues Board",
+    "description": "This extension allows the user print the issues of a gitlab project",
+    "version": "1.0",
+    "browser_action": {
+        "default_icon": "photo.png",
+        "default_popup": "popup.html",
+        "default_title": "GitLab Issues printer"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "all_frames": true,
+            "js": [
+                "scripts/content.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "activeTab",
+        "storage"
+    ]
+}
