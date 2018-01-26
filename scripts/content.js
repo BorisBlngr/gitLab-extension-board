@@ -32,6 +32,11 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
         issue.style.setProperty('grid-auto-rows', 'minmax(100px, auto)');
 
     });
+    var issues = document.querySelectorAll('.issue');
+    [].forEach.call(issues, function (issue) {
+        issue.style.setProperty('border', '2px dashed black');
+
+    });
 
 
     var issuesTitle = document.querySelectorAll('.issue-title-text a');
